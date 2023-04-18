@@ -1,5 +1,6 @@
 package com.example.aula4
 
+import android.media.Image
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -38,7 +39,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ImagemFundo(){
-    val image = painterResource(id = R .drawable .androidparty)
+    val image = painterResource(id = R .drawable .vermelho)
 Box(
     Image(
         painter = image ,
@@ -50,7 +51,6 @@ Box(
 
     Cabecalho( "Anna Clara Mota Pedrosa da Silva" , "Estudante ")
 }
-
 fun Box(modifier: Unit) {
 
 }
@@ -61,20 +61,20 @@ fun Cabecalho(nomeCompleto: String, cargo: String, modifier: Modifier = Modifier
 
     Column(
         modifier = modifier .fillMaxSize(),
-        verticalArrangement = Arrangement.Top,
+        verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
         Text(
             text = nomeCompleto,
-            fontSize = 23.sp,
-            modifier = Modifier.padding(top = 16.dp)
+            fontSize = 24.sp,
+            modifier = Modifier.padding(top = 14.dp)
         )
 
         Text(
             text = cargo,
-            fontSize = 20.sp,
-            modifier = Modifier.padding(top = 16.dp)
+            fontSize = 23.sp,
+            modifier = Modifier.padding(top = 14.dp)
         )
     }
 }
